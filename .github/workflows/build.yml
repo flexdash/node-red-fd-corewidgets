@@ -2,8 +2,6 @@ name: Build NPM package
 
 on: [push]
 
-env:
-
 jobs:
   build-all:
     runs-on: ubuntu-latest
