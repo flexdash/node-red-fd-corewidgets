@@ -18,14 +18,12 @@ jobs:
         run: rm -r widgets
   
       - name: npm publish
-        uses: pascalgn/npm-publish-action@1.3.8
+        uses: JS-DevTools/npm-publish@v1
+        id: publish
         with:
-          publish_command: "npm"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # automatically generated
-          NPM_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }} # from repo settings
+          access: "public"
+          token: ${{ secrets.NPM_AUTH_TOKEN }} # from repo settings
 
       - name: Create annotation
         run: |
-          VERSION=$(egrep version.: package.json) | sed -E 's/=.*"([0-9]\..*)".*/=\1/'
-          echo "::notice title=NPM module::Version ${VERSION} using FlexDash ${{env.FLEXDASH_VERSION}}"
+          echo "::notice title=NPM module::Version ${{steps.publish.outputs.version}}"
