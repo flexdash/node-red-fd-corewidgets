@@ -1,0 +1,30 @@
+<div class="form-row">
+    <label for="node-input-title">Title</label>
+    <input type="text" id="node-input-title" class="fd-typed-input" placeholder="PropsTable"/>
+    <input type="hidden" id="node-input-title-type" />
+    <br><small class="fd-indent">Change using <tt>msg.params[title]</tt>. Default: "PropsTable"</small>
+</div>
+<div class="form-row">
+    <label for="node-input-data">Data</label>
+    <input type="text" id="node-input-data" class="fd-typed-input" placeholder={"key1":"value1","key2":"value2"}/>
+    <input type="hidden" id="node-input-data-type" />
+    <br><small class="fd-indent">Simple key-value pairs to show in table. Change using <tt>msg.params[data]</tt>. Default: {"key1":"value1","key2":"value2"}</small>
+</div>
+<div class="form-row">
+    <label for="node-input-editable">Editable</label>
+    <input type="text" id="node-input-editable" class="fd-typed-input" placeholder=false/>
+    <input type="hidden" id="node-input-editable-type" />
+    <br><small class="fd-indent">Allow editing of the table. Change using <tt>msg.params[editable]</tt>. Default: false</small>
+</div>
+<div class="form-row">
+    <label for="node-input-fields">Fields</label>
+    <input type="text" id="node-input-fields" class="fd-typed-input" placeholder=["key1","key2"]/>
+    <input type="hidden" id="node-input-fields-type" />
+    <br><small class="fd-indent">Fields to show in table in order, show all if empty. Change using <tt>msg.params[fields]</tt>. Default: ["key1","key2"]</small>
+</div>
+<div class="form-row">
+    <label for="node-input-send_all">Send All</label>
+    <input type="text" id="node-input-send_all" class="fd-typed-input" placeholder=false/>
+    <input type="hidden" id="node-input-send_all-type" />
+    <br><small class="fd-indent">Send all fields to topic, not just changed ones. Change using <tt>msg.params[send_all]</tt>. Default: false</small>
+</div>

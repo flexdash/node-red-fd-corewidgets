@@ -1,0 +1,24 @@
+<div class="form-row">
+    <label for="node-input-data">Data</label>
+    <input type="text" id="node-input-data" class="fd-typed-input" placeholder=/>
+    <input type="hidden" id="node-input-data-type" />
+    <br><small class="fd-indent">Array with unix timestamp, wind direction, speed and gust. Change using <tt>msg.params[data]</tt>. </small>
+</div>
+<div class="form-row">
+    <label for="node-input-colors">Colors</label>
+    <input type="text" id="node-input-colors" class="fd-typed-input" placeholder=[]/>
+    <input type="hidden" id="node-input-colors-type" />
+    <br><small class="fd-indent">Array of colors for series, names or #rrggbb. Change using <tt>msg.params[colors]</tt>. Default: []</small>
+</div>
+<div class="form-row">
+    <label for="node-input-widths">Widths</label>
+    <input type="text" id="node-input-widths" class="fd-typed-input" placeholder=[]/>
+    <input type="hidden" id="node-input-widths-type" />
+    <br><small class="fd-indent">Array of stroke widths for series, default is 2. Change using <tt>msg.params[widths]</tt>. Default: []</small>
+</div>
+<div class="form-row">
+    <label for="node-input-unit">Unit</label>
+    <input type="text" id="node-input-unit" class="fd-typed-input" placeholder=""/>
+    <input type="hidden" id="node-input-unit-type" />
+    <br><small class="fd-indent">Unit to label wind speed. Change using <tt>msg.params[unit]</tt>. Default: ""</small>
+</div>
