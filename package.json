@@ -1,6 +1,6 @@
 {
   "name": "@flexdash/node-red-fd-corewidgets",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A set of core FlexDash widgets for Node-RED.",
   "dependencies": {
     "@flexdash/node-red-flexdash": ">=0.3.0",
