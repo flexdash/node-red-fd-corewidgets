@@ -1,0 +1,7 @@
+node_modules/
+package-nodes.json
+package-lock.json
+widgets/
+*.html
+/*.js
+resources/
