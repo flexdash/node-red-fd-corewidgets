@@ -25,6 +25,7 @@
     "version": "^2.0.0",
     "nodes": {
       "flexdash datetime": "datetime.js",
+      "flexdash disabled-widget": "disabled-widget.js",
       "flexdash gauge": "gauge.js",
       "flexdash iframe": "iframe.js",
       "flexdash label": "label.js",
@@ -38,7 +39,6 @@
       "flexdash random-value": "random-value.js",
       "flexdash simple-table": "simple-table.js",
       "flexdash spark-line": "spark-line.js",
-      "flexdash sparkchart": "sparkchart.js",
       "flexdash stat": "stat.js",
       "flexdash text-view": "text-view.js",
       "flexdash thermostat": "thermostat.js",
