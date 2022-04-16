@@ -17,8 +17,8 @@ jobs:
       - name: Remove widgets
         run: rm -r widgets
       
-      - name: npm bump version
-        run: npm version patch
+      # - name: npm bump version
+      #   run: npm version patch
   
       - name: npm publish
         uses: JS-DevTools/npm-publish@v1
