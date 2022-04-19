@@ -1,9 +1,9 @@
 {
   "name": "@flexdash/node-red-fd-corewidgets",
-  "version": "0.1.5",
+  "version": "0.4.18",
   "description": "A set of core FlexDash widgets for Node-RED.",
   "dependencies": {
-    "@flexdash/node-red-flexdash": ">=0.3.0",
+    "@flexdash/node-red-flexdash": ">=0.4.18",
     "uplot": "^1.6.19"
   },
   "author": "Thorsten von Eicken",
@@ -25,29 +25,21 @@
     "version": "^2.0.0",
     "nodes": {
       "flexdash datetime": "datetime.js",
-      "flexdash disabled-widget": "disabled-widget.js",
       "flexdash gauge": "gauge.js",
       "flexdash iframe": "iframe.js",
       "flexdash label": "label.js",
-      "flexdash loading-widget": "loading-widget.js",
       "flexdash markdown": "markdown.js",
-      "flexdash panel": "panel.js",
       "flexdash popup-button": "popup-button.js",
       "flexdash props-table": "props-table.js",
       "flexdash push-button": "push-button.js",
-      "flexdash random-array": "random-array.js",
-      "flexdash random-value": "random-value.js",
       "flexdash simple-table": "simple-table.js",
       "flexdash spark-line": "spark-line.js",
       "flexdash stat": "stat.js",
       "flexdash text-view": "text-view.js",
-      "flexdash thermostat": "thermostat.js",
       "flexdash time-plot-raw": "time-plot-raw.js",
       "flexdash time-plot": "time-plot.js",
       "flexdash toggle": "toggle.js",
       "flexdash tree-view": "tree-view.js",
-      "flexdash unknown-widget": "unknown-widget.js",
-      "flexdash upload-button": "upload-button.js",
       "flexdash value-sequence": "value-sequence.js",
       "flexdash wind-plot": "wind-plot.js"
     }

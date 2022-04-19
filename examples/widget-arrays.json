@@ -1,0 +1,819 @@
+[
+    {
+        "id": "ff3b8ee5e9ce7a43",
+        "type": "gauge",
+        "z": "8adc3561486ddda2",
+        "fd_container": "222e41c74ddbb9c9",
+        "fd_cols": 1,
+        "fd_rows": 1,
+        "fd_array": true,
+        "fd_array_max": "4",
+        "name": "temperature",
+        "title": "Temperatures",
+        "value": "",
+        "unit": "°F",
+        "arc": 90,
+        "min": 0,
+        "max": 100,
+        "color": "green",
+        "low_color": "blue",
+        "high_color": "pink",
+        "low_threshold": "",
+        "high_threshold": "",
+        "base_color": "lightgrey",
+        "needle_color": "white",
+        "radius": 70,
+        "stretch": "false",
+        "x": 500,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "80bd07475f5e66ca",
+        "type": "inject",
+        "z": "8adc3561486ddda2",
+        "name": "76 @0",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "p": "title",
+                "v": "Kitchen",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "3",
+        "topic": "",
+        "payload": "76",
+        "payloadType": "num",
+        "x": 300,
+        "y": 60,
+        "wires": [
+            [
+                "ff3b8ee5e9ce7a43"
+            ]
+        ]
+    },
+    {
+        "id": "589fbd72f34dbe07",
+        "type": "inject",
+        "z": "8adc3561486ddda2",
+        "name": "32 @1",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "p": "title",
+                "v": "Outdoor",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "32",
+        "payloadType": "num",
+        "x": 290,
+        "y": 120,
+        "wires": [
+            [
+                "ff3b8ee5e9ce7a43"
+            ]
+        ]
+    },
+    {
+        "id": "880c1ba444182e0e",
+        "type": "stat",
+        "z": "8adc3561486ddda2",
+        "fd_container": "222e41c74ddbb9c9",
+        "fd_cols": 1,
+        "fd_rows": 1,
+        "fd_array": true,
+        "fd_array_max": "1",
+        "name": "",
+        "title": "Tada",
+        "unit": "%rh",
+        "value": "",
+        "color": "",
+        "low_color": "blue",
+        "high_color": "pink",
+        "low_threshold": "",
+        "high_threshold": "",
+        "low_regexp": "",
+        "high_regexp": "",
+        "chip": "false",
+        "iso_prefix": "true",
+        "zoom": 1,
+        "x": 480,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "01fe60d76e2c0df4",
+        "type": "inject",
+        "z": "8adc3561486ddda2",
+        "name": "62 @0",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "title",
+                "v": "Kitchen",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "3",
+        "topic": "",
+        "payload": "62",
+        "payloadType": "num",
+        "x": 300,
+        "y": 200,
+        "wires": [
+            [
+                "880c1ba444182e0e"
+            ]
+        ]
+    },
+    {
+        "id": "8507714fd64c0831",
+        "type": "inject",
+        "z": "8adc3561486ddda2",
+        "name": "14 @1",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "title",
+                "v": "Outdoor",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "3",
+        "topic": "",
+        "payload": "14",
+        "payloadType": "num",
+        "x": 300,
+        "y": 260,
+        "wires": [
+            [
+                "880c1ba444182e0e"
+            ]
+        ]
+    },
+    {
+        "id": "04783451a9be9df5",
+        "type": "inject",
+        "z": "8adc3561486ddda2",
+        "name": "delete @0",
+        "props": [
+            {
+                "p": "_delete",
+                "v": "true",
+                "vt": "bool"
+            },
+            {
+                "p": "topic",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 300,
+        "y": 320,
+        "wires": [
+            [
+                "880c1ba444182e0e"
+            ]
+        ]
+    },
+    {
+        "id": "e4438375f66f580d",
+        "type": "date-time",
+        "z": "8adc3561486ddda2",
+        "fd_container": "222e41c74ddbb9c9",
+        "fd_cols": 1,
+        "fd_rows": 1,
+        "fd_array": true,
+        "fd_array_max": 10,
+        "name": "updated ago",
+        "title": "Date Time",
+        "value": "",
+        "color": "",
+        "low_color": "blue",
+        "high_color": "pink",
+        "low_threshold": "",
+        "high_threshold": "",
+        "chip": "false",
+        "start_mode": "2",
+        "units": [
+            "now",
+            "sec",
+            "min",
+            "hr",
+            "days",
+            "weeks",
+            "months"
+        ],
+        "zoom": 100,
+        "x": 1060,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "6686f878f38c59f8",
+        "type": "inject",
+        "z": "8adc3561486ddda2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "title",
+                "v": "Kitchen",
+                "vt": "str"
+            },
+            {
+                "p": "color",
+                "v": "#558B2F",
+                "vt": "str"
+            }
+        ],
+        "repeat": "10",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "kitchen",
+        "payload": "",
+        "payloadType": "date",
+        "x": 800,
+        "y": 60,
+        "wires": [
+            [
+                "e4438375f66f580d"
+            ]
+        ]
+    },
+    {
+        "id": "1c52750765808503",
+        "type": "inject",
+        "z": "8adc3561486ddda2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            },
+            {
+                "p": "title",
+                "v": "Bathroom",
+                "vt": "str"
+            },
+            {
+                "p": "color",
+                "v": "#1565C0",
+                "vt": "str"
+            }
+        ],
+        "repeat": "13",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "bathroom",
+        "payload": "",
+        "payloadType": "date",
+        "x": 800,
+        "y": 140,
+        "wires": [
+            [
+                "e4438375f66f580d"
+            ]
+        ]
+    },
+    {
+        "id": "ed7477892a74767c",
+        "type": "gauge",
+        "z": "8adc3561486ddda2",
+        "fd_container": "dc312cdca781d24c",
+        "fd_cols": "2",
+        "fd_rows": "2",
+        "fd_array": true,
+        "fd_array_max": "4",
+        "name": "temperature",
+        "title": "Temperatures",
+        "value": "",
+        "unit": "°F",
+        "arc": 90,
+        "min": 0,
+        "max": 100,
+        "color": "green",
+        "low_color": "blue",
+        "high_color": "pink",
+        "low_threshold": "",
+        "high_threshold": "",
+        "base_color": "lightgrey",
+        "needle_color": "white",
+        "radius": 70,
+        "stretch": "false",
+        "x": 960,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "ab261c5dea9fa7dc",
+        "type": "inject",
+        "z": "8adc3561486ddda2",
+        "name": "250 @0",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "p": "title",
+                "v": "Oven",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "3",
+        "topic": "",
+        "payload": "250",
+        "payloadType": "num",
+        "x": 760,
+        "y": 240,
+        "wires": [
+            [
+                "ed7477892a74767c"
+            ]
+        ]
+    },
+    {
+        "id": "2dad91534cdefb40",
+        "type": "inject",
+        "z": "8adc3561486ddda2",
+        "name": "-2 @1",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "p": "title",
+                "v": "Freezer",
+                "vt": "str"
+            },
+            {
+                "p": "min",
+                "v": "-40",
+                "vt": "num"
+            },
+            {
+                "p": "color",
+                "v": "#88ffff",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "-2",
+        "payloadType": "num",
+        "x": 750,
+        "y": 300,
+        "wires": [
+            [
+                "ed7477892a74767c"
+            ]
+        ]
+    },
+    {
+        "id": "189a3497beb18f80",
+        "type": "stat",
+        "z": "8adc3561486ddda2",
+        "fd_container": "dc312cdca781d24c",
+        "fd_cols": "2",
+        "fd_rows": "2",
+        "fd_array": true,
+        "fd_array_max": "1",
+        "name": "",
+        "title": "Tada",
+        "unit": "%rh",
+        "value": "",
+        "color": "",
+        "low_color": "blue",
+        "high_color": "pink",
+        "low_threshold": "",
+        "high_threshold": "",
+        "low_regexp": "",
+        "high_regexp": "",
+        "chip": "false",
+        "iso_prefix": "true",
+        "zoom": 1,
+        "x": 940,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "4e7e99210f3e72f8",
+        "type": "inject",
+        "z": "8adc3561486ddda2",
+        "name": "2 @0",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "title",
+                "v": "Oven",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "3",
+        "topic": "",
+        "payload": "2",
+        "payloadType": "num",
+        "x": 750,
+        "y": 380,
+        "wires": [
+            [
+                "189a3497beb18f80"
+            ]
+        ]
+    },
+    {
+        "id": "5ff00819b7baede6",
+        "type": "inject",
+        "z": "8adc3561486ddda2",
+        "name": "99 @1",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "title",
+                "v": "Freezer",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "3",
+        "topic": "",
+        "payload": "99",
+        "payloadType": "num",
+        "x": 760,
+        "y": 440,
+        "wires": [
+            [
+                "189a3497beb18f80"
+            ]
+        ]
+    },
+    {
+        "id": "ecc687a3d03d22c4",
+        "type": "inject",
+        "z": "8adc3561486ddda2",
+        "name": "delete @0",
+        "props": [
+            {
+                "p": "_delete",
+                "v": "true",
+                "vt": "bool"
+            },
+            {
+                "p": "topic",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 760,
+        "y": 500,
+        "wires": [
+            [
+                "189a3497beb18f80"
+            ]
+        ]
+    },
+    {
+        "id": "e71216b0cf062c73",
+        "type": "stat",
+        "z": "8adc3561486ddda2",
+        "fd_container": "ce17e7e77546bc50",
+        "fd_cols": "3",
+        "fd_rows": 1,
+        "fd_array": true,
+        "fd_array_max": 10,
+        "name": "counter",
+        "title": "Stat",
+        "unit": "",
+        "value": "",
+        "color": "#009688",
+        "low_color": "blue",
+        "high_color": "pink",
+        "low_threshold": "",
+        "high_threshold": "",
+        "low_regexp": "",
+        "high_regexp": "",
+        "chip": "false",
+        "iso_prefix": "true",
+        "zoom": 1,
+        "x": 440,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "4675860a810a3fe0",
+        "type": "push-button",
+        "z": "8adc3561486ddda2",
+        "fd_container": "ce17e7e77546bc50",
+        "fd_cols": "3",
+        "fd_rows": 1,
+        "fd_array": true,
+        "fd_array_max": 10,
+        "name": "restart counter",
+        "title": "Push Button",
+        "enabled": "true",
+        "color": "primary",
+        "output_value": 25,
+        "icon": "",
+        "x": 470,
+        "y": 660,
+        "wires": [
+            [
+                "ec914e38227ff3e1",
+                "65436119ef138b69"
+            ]
+        ]
+    },
+    {
+        "id": "83f9d6d3fc916aee",
+        "type": "inject",
+        "z": "8adc3561486ddda2",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "3",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "mallards",
+        "x": 130,
+        "y": 520,
+        "wires": [
+            [
+                "540e6f8785f7672a"
+            ]
+        ]
+    },
+    {
+        "id": "540e6f8785f7672a",
+        "type": "function",
+        "z": "8adc3561486ddda2",
+        "name": "inc counter",
+        "func": "let count = flow.get(msg.topic)||0\nflow.set(msg.topic, count+1)\n\nreturn { topic: msg.topic, payload: count }",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 190,
+        "y": 600,
+        "wires": [
+            [
+                "e71216b0cf062c73"
+            ]
+        ]
+    },
+    {
+        "id": "6a0a018c112a9f6b",
+        "type": "inject",
+        "z": "8adc3561486ddda2",
+        "name": "",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "4",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "geese",
+        "x": 120,
+        "y": 560,
+        "wires": [
+            [
+                "540e6f8785f7672a"
+            ]
+        ]
+    },
+    {
+        "id": "2c4a193989148a14",
+        "type": "inject",
+        "z": "8adc3561486ddda2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 480,
+        "wires": [
+            [
+                "6237ed41ac09018b"
+            ]
+        ]
+    },
+    {
+        "id": "6237ed41ac09018b",
+        "type": "function",
+        "z": "8adc3561486ddda2",
+        "name": "init array",
+        "func": "return [\n    [ // two messages on first output\n        { topic: \"geese\", title: \"Geese\", color: \"#777777\" },\n        { topic: \"mallards\", title: \"Mallards\", color: \"#009688\" },\n    ],\n    [ // two messages on second output\n        { topic: \"geese\", title: \"Reset geese\", output_value: \"reset\" },\n        { topic: \"mallards\", title: \"reset Mallards\", output_value: \"reset\" },\n    ],\n]",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 300,
+        "y": 480,
+        "wires": [
+            [
+                "e71216b0cf062c73"
+            ],
+            [
+                "4675860a810a3fe0"
+            ]
+        ]
+    },
+    {
+        "id": "ec914e38227ff3e1",
+        "type": "debug",
+        "z": "8adc3561486ddda2",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "65436119ef138b69",
+        "type": "function",
+        "z": "8adc3561486ddda2",
+        "name": "reset counter",
+        "func": "if (msg.payload == 'reset') flow.set(msg.topic, 0)\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 700,
+        "y": 660,
+        "wires": [
+            [
+                "540e6f8785f7672a"
+            ]
+        ]
+    },
+    {
+        "id": "222e41c74ddbb9c9",
+        "type": "flexdash container",
+        "name": "Array",
+        "kind": "StdGrid",
+        "fd_children": ",dc312cdca781d24c,ce17e7e77546bc50,ff3b8ee5e9ce7a43,880c1ba444182e0e,e4438375f66f580d",
+        "tab": "0f2fbd92247e8720",
+        "min_cols": "1",
+        "max_cols": 5,
+        "parent": "",
+        "solid": false,
+        "cols": "1",
+        "rows": "1"
+    },
+    {
+        "id": "dc312cdca781d24c",
+        "type": "flexdash container",
+        "name": "Rooms",
+        "kind": "Panel",
+        "fd_children": ",ed7477892a74767c,189a3497beb18f80",
+        "tab": "",
+        "min_cols": "1",
+        "max_cols": "20",
+        "parent": "222e41c74ddbb9c9",
+        "solid": false,
+        "cols": "2",
+        "rows": "2"
+    },
+    {
+        "id": "ce17e7e77546bc50",
+        "type": "flexdash container",
+        "name": "Counters",
+        "kind": "Panel",
+        "fd_children": ",e71216b0cf062c73,4675860a810a3fe0",
+        "title": "Demo counters",
+        "tab": "",
+        "min_cols": "1",
+        "max_cols": "20",
+        "parent": "222e41c74ddbb9c9",
+        "solid": false,
+        "cols": "3",
+        "rows": "2"
+    }
+]

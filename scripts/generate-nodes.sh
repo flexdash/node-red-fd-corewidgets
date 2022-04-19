@@ -9,10 +9,19 @@ curl -L https://s3.amazonaws.com/s3.voneicken.com/flexdash/flexdash-${FLEXDASH_V
     tar -C flexdash-src -zxf - src/widgets
 rm -rf widgets
 cp -r flexdash-src/src/widgets widgets
+( cd widgets; rm *-widget.vue panel.vue random-*.vue thermostat.vue upload-button.vue )
 # hack for uplot dependency
 mkdir widgets/node_modules
 cp -r ./node_modules/uplot widgets/node_modules
 # generate nodes
-node ./node_modules/.bin/gen-widget-nodes
+rm *.html *.js
+if [[ -f ../node-red-flexdash/gen-widget-nodes.js ]]; then
+    echo Using source gen-widget-nodes
+    node ../node-red-flexdash/gen-widget-nodes.js
+else
+    node ./node_modules/.bin/gen-widget-nodes
+fi
 # insert the generated nodes into package.json
 node ./scripts/update-package-json.js
+# clean up
+rm -rf widgets
