@@ -15,7 +15,7 @@ jobs:
         run: ./scripts/generate-nodes.sh
 
       - name: Remove widgets
-        run: rm -r widgets
+        run: rm -rf widgets
       
       # - name: npm bump version
       #   run: npm version patch
