@@ -14,7 +14,7 @@ cp -r flexdash-src/src/widgets widgets
 mkdir widgets/node_modules
 cp -r ./node_modules/uplot widgets/node_modules
 # generate nodes
-rm *.html *.js
+rm -f *.html *.js
 if [[ -f ../node-red-flexdash/gen-widget-nodes.js ]]; then
     echo Using source gen-widget-nodes
     node ../node-red-flexdash/gen-widget-nodes.js

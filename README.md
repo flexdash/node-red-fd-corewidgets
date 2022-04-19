@@ -10,3 +10,5 @@ This repository itself does not contain any widgets or any nodes, the way it wor
   NPM module is installed (`npm install`)
 - the node code generator from node-red-fd-flexdash is run to generate the nodes
 - the set of generated nodes are published to NPM
+- stat widget pill size
+- change default colors in all widgets from names to hex values
