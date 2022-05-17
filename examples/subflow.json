@@ -1,0 +1,383 @@
+[
+    {
+        "id": "96d0259206356071",
+        "type": "subflow",
+        "name": "Subflow 1",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 160,
+                "y": 40,
+                "wires": [
+                    {
+                        "id": "ee797777226f85f7"
+                    },
+                    {
+                        "id": "ad7545cc9c3c51ca"
+                    }
+                ]
+            }
+        ],
+        "out": [],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "ee797777226f85f7",
+        "type": "gauge",
+        "z": "96d0259206356071",
+        "fd_container": "12a3ea6ea0334c41",
+        "fd_cols": "2",
+        "fd_rows": "2",
+        "fd_array": false,
+        "fd_array_max": 10,
+        "name": "",
+        "title": "Gauge",
+        "value": "",
+        "unit": "",
+        "arc": 90,
+        "min": 0,
+        "max": 100,
+        "color": "green",
+        "low_color": "blue",
+        "high_color": "pink",
+        "low_threshold": "",
+        "high_threshold": "",
+        "base_color": "lightgrey",
+        "needle_color": "white",
+        "radius": 70,
+        "stretch": "false",
+        "x": 290,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "ad7545cc9c3c51ca",
+        "type": "stat",
+        "z": "96d0259206356071",
+        "fd_container": "12a3ea6ea0334c41",
+        "fd_cols": "2",
+        "fd_rows": "2",
+        "fd_array": false,
+        "fd_array_max": 10,
+        "name": "",
+        "title": "Stat",
+        "unit": "",
+        "value": "",
+        "color": "",
+        "low_color": "blue",
+        "high_color": "pink",
+        "low_threshold": "",
+        "high_threshold": "",
+        "low_regexp": "",
+        "high_regexp": "",
+        "chip": "false",
+        "iso_prefix": "true",
+        "zoom": 1,
+        "x": 290,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "12a3ea6ea0334c41",
+        "type": "flexdash container",
+        "z": "96d0259206356071",
+        "name": "StatGaugePanel",
+        "kind": "SubflowPanel",
+        "fd_children": ",ee797777226f85f7,ad7545cc9c3c51ca",
+        "title": "",
+        "tab": "",
+        "min_cols": "1",
+        "max_cols": "20",
+        "parent": "",
+        "solid": true,
+        "cols": "2",
+        "rows": "1"
+    },
+    {
+        "id": "97e34cb72c2f36bd",
+        "type": "date-time",
+        "z": "15076cfc6842dca4",
+        "fd_container": "d8b26219011823a8",
+        "fd_cols": "2",
+        "fd_rows": 1,
+        "fd_array": false,
+        "fd_array_max": 10,
+        "name": "",
+        "title": "Flow started at",
+        "value": "",
+        "color": "",
+        "low_color": "",
+        "high_color": "pink",
+        "low_threshold": "",
+        "high_threshold": "",
+        "chip": "false",
+        "start_mode": 0,
+        "units": [
+            "now",
+            "sec",
+            "min",
+            "hr",
+            "days",
+            "weeks",
+            "months"
+        ],
+        "zoom": 100,
+        "x": 360,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "2aac71d34da0af1c",
+        "type": "inject",
+        "z": "15076cfc6842dca4",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 80,
+        "wires": [
+            [
+                "97e34cb72c2f36bd",
+                "81ba0520e6dcbebb"
+            ]
+        ]
+    },
+    {
+        "id": "1c85227bbc14e51f",
+        "type": "subflow:96d0259206356071",
+        "z": "15076cfc6842dca4",
+        "name": "SF instance 1",
+        "env": [
+            {
+                "name": "fd_container",
+                "value": "69c2e3f5798c3475",
+                "type": "str"
+            },
+            {
+                "name": "fd_rows",
+                "value": "2",
+                "type": "num"
+            },
+            {
+                "name": "fd_cols",
+                "value": "2",
+                "type": "num"
+            },
+            {
+                "name": "flexdash_grid",
+                "value": "d8b26219011823a8",
+                "type": "str"
+            }
+        ],
+        "flexdash_grid": "d8b26219011823a8",
+        "x": 380,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "81c8cf69142785ba",
+        "type": "subflow:96d0259206356071",
+        "z": "15076cfc6842dca4",
+        "name": "SF instance 2",
+        "env": [
+            {
+                "name": "fd_container",
+                "value": "69c2e3f5798c3475",
+                "type": "str"
+            },
+            {
+                "name": "fd_rows",
+                "value": "2",
+                "type": "num"
+            },
+            {
+                "name": "fd_cols",
+                "value": "2",
+                "type": "num"
+            },
+            {
+                "name": "flexdash_grid",
+                "value": "d8b26219011823a8",
+                "type": "str"
+            }
+        ],
+        "flexdash_grid": "d8b26219011823a8",
+        "x": 380,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "81ba0520e6dcbebb",
+        "type": "change",
+        "z": "15076cfc6842dca4",
+        "name": "76",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "76",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 170,
+        "y": 140,
+        "wires": [
+            [
+                "1c85227bbc14e51f",
+                "38c8f0d0cc441e4a"
+            ]
+        ]
+    },
+    {
+        "id": "38c8f0d0cc441e4a",
+        "type": "change",
+        "z": "15076cfc6842dca4",
+        "name": "37",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "37",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 170,
+        "y": 200,
+        "wires": [
+            [
+                "81c8cf69142785ba",
+                "2d8674a80fb0e380"
+            ]
+        ]
+    },
+    {
+        "id": "61dd3827e4796af6",
+        "type": "subflow:96d0259206356071",
+        "z": "15076cfc6842dca4",
+        "name": "SF instance 3",
+        "env": [
+            {
+                "name": "fd_container",
+                "value": "6859e192230ad74e",
+                "type": "str"
+            },
+            {
+                "name": "fd_rows",
+                "value": "2",
+                "type": "num"
+            },
+            {
+                "name": "fd_cols",
+                "value": "2",
+                "type": "num"
+            },
+            {
+                "name": "flexdash_grid",
+                "value": "81f312cf3ae5e1d3",
+                "type": "str"
+            }
+        ],
+        "flexdash_grid": "81f312cf3ae5e1d3",
+        "x": 380,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "2d8674a80fb0e380",
+        "type": "change",
+        "z": "15076cfc6842dca4",
+        "name": "101",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "101",
+                "tot": "num"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 170,
+        "y": 260,
+        "wires": [
+            [
+                "61dd3827e4796af6"
+            ]
+        ]
+    },
+    {
+        "id": "db8055fbcbf5a7ce",
+        "type": "markdown",
+        "z": "15076cfc6842dca4",
+        "fd_container": "81f312cf3ae5e1d3",
+        "fd_cols": "2",
+        "fd_rows": 1,
+        "fd_array": false,
+        "fd_array_max": 10,
+        "name": "",
+        "title": "",
+        "text": "## Welcome to the second tab!",
+        "x": 370,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "d8b26219011823a8",
+        "type": "flexdash container",
+        "name": "grid1",
+        "kind": "StdGrid",
+        "fd_children": ",97e34cb72c2f36bd,1c85227bbc14e51f-12a3ea6ea0334c41,81c8cf69142785ba-12a3ea6ea0334c41",
+        "title": "Grid 1",
+        "tab": "44094f7c41df5c3c",
+        "min_cols": "1",
+        "max_cols": "20",
+        "parent": "",
+        "solid": false,
+        "cols": "1",
+        "rows": "1"
+    },
+    {
+        "id": "81f312cf3ae5e1d3",
+        "type": "flexdash container",
+        "name": "grid2",
+        "kind": "StdGrid",
+        "fd_children": ",db8055fbcbf5a7ce,61dd3827e4796af6-12a3ea6ea0334c41",
+        "title": "Grid 2",
+        "tab": "44094f7c41df5c3c",
+        "min_cols": "1",
+        "max_cols": "20",
+        "parent": "d8b26219011823a8",
+        "solid": false,
+        "cols": "1",
+        "rows": "1"
+    }
+]
