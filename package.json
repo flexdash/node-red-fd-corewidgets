@@ -3,7 +3,7 @@
   "version": "0.4.19",
   "description": "A set of core FlexDash widgets for Node-RED.",
   "dependencies": {
-    "@flexdash/node-red-flexdash": ">=0.4.18",
+    "@flexdash/node-red-flexdash": ">=0.4.20",
     "uplot": "^1.6.19"
   },
   "author": "Thorsten von Eicken",
@@ -22,7 +22,7 @@
     "url": "git+https://github.com/flexdash/node-red-fd-corewidgets.git"
   },
   "node-red": {
-    "version": "^2.0.0",
+    "version": ">=2.0.6",
     "nodes": {
       "flexdash datetime": "datetime.js",
       "flexdash gauge": "gauge.js",
