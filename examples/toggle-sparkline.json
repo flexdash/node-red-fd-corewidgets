@@ -1,0 +1,201 @@
+[
+    {
+        "id": "903334f637326ef0",
+        "type": "toggle",
+        "z": "10b3c8271bea3298",
+        "fd_container": "ef842956920fe694",
+        "fd_cols": 1,
+        "fd_rows": 1,
+        "fd_array": false,
+        "fd_array_max": 10,
+        "name": "on/off",
+        "title": "run",
+        "value": "",
+        "enabled": "true",
+        "color": "primary",
+        "on_value": "ON",
+        "off_value": "OFF",
+        "show_value": true,
+        "x": 230,
+        "y": 120,
+        "wires": [
+            [
+                "3b5c7f53a41bb6dc",
+                "fa84b4dea4c39af6",
+                "1e6c7a273cda476c"
+            ]
+        ]
+    },
+    {
+        "id": "36a95def59e7267b",
+        "type": "spark-line",
+        "z": "10b3c8271bea3298",
+        "fd_container": "ef842956920fe694",
+        "fd_cols": 1,
+        "fd_rows": 1,
+        "fd_array": false,
+        "fd_array_max": 10,
+        "name": "",
+        "title": "Spark Line",
+        "value": 0,
+        "color": "blue",
+        "fill_color": "",
+        "text_color": "",
+        "show_value": "false",
+        "unit": "",
+        "x": 560,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "ccddd1b07b5cff3c",
+        "type": "inject",
+        "z": "10b3c8271bea3298",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "2",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 230,
+        "y": 200,
+        "wires": [
+            [
+                "5ab4e968a57ee4d4"
+            ]
+        ]
+    },
+    {
+        "id": "5ab4e968a57ee4d4",
+        "type": "function",
+        "z": "10b3c8271bea3298",
+        "name": "",
+        "func": "let enable = flow.get('enable')\nif (enable == \"ON\") {\n    return { payload: msg.payload%5 }\n} else {\n    return { payload: 0 }\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 200,
+        "wires": [
+            [
+                "36a95def59e7267b"
+            ]
+        ]
+    },
+    {
+        "id": "3b5c7f53a41bb6dc",
+        "type": "change",
+        "z": "10b3c8271bea3298",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enable",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 420,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fa84b4dea4c39af6",
+        "type": "debug",
+        "z": "10b3c8271bea3298",
+        "name": "on/off switch",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 410,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "1e6c7a273cda476c",
+        "type": "function",
+        "z": "10b3c8271bea3298",
+        "name": " ",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 235,
+        "y": 160,
+        "wires": [
+            [
+                "903334f637326ef0"
+            ]
+        ],
+        "icon": "node-red/arrow-in.svg",
+        "l": false
+    },
+    {
+        "id": "e4219d74214e5d9d",
+        "type": "comment",
+        "z": "10b3c8271bea3298",
+        "name": "Toggle and Sparkline",
+        "info": "The sparkline displays a random time series, updated every 2 seconds as long as the toggle is ON.",
+        "x": 240,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "ef842956920fe694",
+        "type": "flexdash container",
+        "name": "grid3",
+        "kind": "StdGrid",
+        "fd_children": ",903334f637326ef0,36a95def59e7267b",
+        "title": "",
+        "tab": "44094f7c41df5c3c",
+        "min_cols": "1",
+        "max_cols": "20",
+        "parent": "d8b26219011823a8",
+        "solid": false,
+        "cols": "1",
+        "rows": "1"
+    },
+    {
+        "id": "d8b26219011823a8",
+        "type": "flexdash container",
+        "name": "grid1",
+        "kind": "StdGrid",
+        "fd_children": ",97e34cb72c2f36bd,1c85227bbc14e51f-12a3ea6ea0334c41,81c8cf69142785ba-12a3ea6ea0334c41",
+        "title": "Grid 1",
+        "tab": "44094f7c41df5c3c",
+        "min_cols": "1",
+        "max_cols": "20",
+        "parent": "",
+        "solid": false,
+        "cols": "1",
+        "rows": "1"
+    }
+]
