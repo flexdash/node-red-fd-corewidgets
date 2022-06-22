@@ -1,0 +1,172 @@
+[
+    {
+        "id": "02a8193ebdb37b8f",
+        "type": "time-plot",
+        "z": "12f2c5078f97285a",
+        "fd_container": "28d1859702cdf729",
+        "fd_cols": "3",
+        "fd_rows": "3",
+        "fd_array": false,
+        "fd_array_max": 10,
+        "name": "",
+        "title": "Waves",
+        "popup_info": "",
+        "data": "",
+        "labels": [
+            "sin",
+            "cos"
+        ],
+        "colors": [],
+        "axes": [],
+        "widths": [],
+        "span_gaps": [],
+        "left_unit": "",
+        "right_unit": "",
+        "left_min": "",
+        "left_max": "",
+        "left_decimals": 1,
+        "right_min": "",
+        "right_max": "",
+        "right_decimals": 1,
+        "x": 440,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d2dbe97c44f6fb5a",
+        "type": "wind-plot",
+        "z": "12f2c5078f97285a",
+        "fd_container": "28d1859702cdf729",
+        "fd_cols": "3",
+        "fd_rows": "3",
+        "fd_array": false,
+        "fd_array_max": 10,
+        "name": "",
+        "title": "Wind Plot",
+        "popup_info": "",
+        "data": "",
+        "colors": [],
+        "widths": [],
+        "unit": "mph",
+        "x": 440,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d2a94db941e6b041",
+        "type": "inject",
+        "z": "12f2c5078f97285a",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "2",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 130,
+        "y": 120,
+        "wires": [
+            [
+                "f8ec3cc65353506e",
+                "353dee4a0a1f7508"
+            ]
+        ]
+    },
+    {
+        "id": "f8ec3cc65353506e",
+        "type": "function",
+        "z": "12f2c5078f97285a",
+        "name": "gen waves",
+        "func": "let now = msg.payload\nlet s = Math.sin(now/10000)\nlet c = 1.2*Math.cos(now/13000)\nreturn { payload: [now/1000, s, c], labels: [\"sin\", \"cos\"] }",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 170,
+        "y": 180,
+        "wires": [
+            [
+                "02a8193ebdb37b8f"
+            ]
+        ]
+    },
+    {
+        "id": "353dee4a0a1f7508",
+        "type": "function",
+        "z": "12f2c5078f97285a",
+        "name": "gen wind",
+        "func": "let now = msg.payload/1000\nlet w = 8+6*Math.sin(now/46)\nlet g = w + 2*(1+Math.sin(now/76))\nlet d = (now/13) % 360\nreturn { payload: [now, d, w, g] }",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 160,
+        "y": 260,
+        "wires": [
+            [
+                "d2dbe97c44f6fb5a"
+            ]
+        ]
+    },
+    {
+        "id": "28d1859702cdf729",
+        "type": "flexdash container",
+        "name": "grid6",
+        "kind": "StdGrid",
+        "fd_children": ",02a8193ebdb37b8f,d2dbe97c44f6fb5a",
+        "title": "",
+        "tab": "9fc162ca8cb5a4db",
+        "min_cols": "1",
+        "max_cols": "20",
+        "parent": "b90d8c663d6e4732",
+        "solid": false,
+        "cols": "1",
+        "rows": "1"
+    },
+    {
+        "id": "b90d8c663d6e4732",
+        "type": "flexdash container",
+        "name": "grid 4",
+        "kind": "StdGrid",
+        "fd_children": ",47eef9c1f3c37624,9c725a1b1c31f046,c09c95e5c37a08cf",
+        "title": "settings",
+        "tab": "44094f7c41df5c3c",
+        "min_cols": "1",
+        "max_cols": "20",
+        "parent": "d8b26219011823a8",
+        "solid": false,
+        "cols": "1",
+        "rows": "1"
+    },
+    {
+        "id": "d8b26219011823a8",
+        "type": "flexdash container",
+        "name": "grid1",
+        "kind": "StdGrid",
+        "fd_children": ",97e34cb72c2f36bd,1c85227bbc14e51f-12a3ea6ea0334c41,81c8cf69142785ba-12a3ea6ea0334c41",
+        "title": "Grid 1",
+        "tab": "44094f7c41df5c3c",
+        "min_cols": "1",
+        "max_cols": "20",
+        "parent": "",
+        "solid": false,
+        "cols": "1",
+        "rows": "1"
+    }
+]
