@@ -1,9 +1,9 @@
 {
   "name": "@flexdash/node-red-fd-corewidgets",
-  "version": "0.4.20",
+  "version": "0.4.25",
   "description": "A set of core FlexDash widgets for Node-RED.",
   "dependencies": {
-    "@flexdash/node-red-flexdash": ">=0.4.20",
+    "@flexdash/node-red-flexdash": ">=0.4.25",
     "uplot": "^1.6.19"
   },
   "author": "Thorsten von Eicken",
