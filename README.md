@@ -10,3 +10,9 @@ This repository itself does not contain any widgets or any nodes, the way it wor
   NPM module is installed (`npm install`)
 - the node code generator from node-red-fd-flexdash is run to generate the nodes
 - the set of generated nodes are published to NPM
+
+The widget generation and publishing to npm happens as part of the github
+workflow in `.github/workflows/build.yml`.
+
+For help, please read the [FlexDash Docs](https://flexdash.github.io/docs)
+and check the [Node-RED forum](https://discourse.nodered.org).
