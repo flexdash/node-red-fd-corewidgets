@@ -1,5 +1,5 @@
 #! /bin/bash -ex
-FLEXDASH_VERSION=0.4.5
+FLEXDASH_VERSION=0.4
 
 npm install --no-progress --no-audit --no-fund
 # get flexdash source since the widget sources are there
