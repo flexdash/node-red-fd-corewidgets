@@ -671,5 +671,14 @@
         "solid": true,
         "cols": "1",
         "rows": "1"
+    },
+    {
+        "id": "e8d66b51b7d3600c",
+        "type": "flexdash tab",
+        "name": "",
+        "icon": "mdi-rocket",
+        "title": "demo-all",
+        "fd_children": ",5706d648a3e5e7bf",
+        "fd": "e8f5aea52ab49500"
     }
 ]

@@ -1,5 +1,117 @@
 [
     {
+        "id": "37a6a41eac96c615",
+        "type": "subflow",
+        "name": "subflow-w-array",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 120,
+                "y": 100,
+                "wires": [
+                    {
+                        "id": "a22a628ae7b193d3"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 580,
+                "y": 100,
+                "wires": [
+                    {
+                        "id": "dab802305f5f4f70",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "a22a628ae7b193d3",
+        "type": "change",
+        "z": "37a6a41eac96c615",
+        "name": "set topic",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "output_value",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "title",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 240,
+        "y": 100,
+        "wires": [
+            [
+                "dab802305f5f4f70"
+            ]
+        ]
+    },
+    {
+        "id": "dab802305f5f4f70",
+        "type": "push-button",
+        "z": "37a6a41eac96c615",
+        "fd_container": "b5d2aed76e91f340",
+        "fd_cols": "1",
+        "fd_rows": 1,
+        "fd_array": true,
+        "fd_array_max": 10,
+        "name": "",
+        "title": "Push Button",
+        "popup_info": "",
+        "enabled": "true",
+        "color": "primary",
+        "output_value": 25,
+        "icon": "",
+        "x": 440,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b5d2aed76e91f340",
+        "type": "flexdash container",
+        "z": "37a6a41eac96c615",
+        "name": "sfp2",
+        "kind": "SubflowPanel",
+        "fd_children": ",dab802305f5f4f70",
+        "title": "Subflow Panel for array",
+        "tab": "",
+        "min_cols": "1",
+        "max_cols": "20",
+        "parent": "",
+        "solid": false,
+        "cols": "8",
+        "rows": "1"
+    },
+    {
         "id": "96d0259206356071",
         "type": "subflow",
         "name": "Subflow 1",
@@ -8,18 +120,26 @@
         "in": [
             {
                 "x": 160,
-                "y": 40,
+                "y": 80,
                 "wires": [
                     {
-                        "id": "ee797777226f85f7"
-                    },
-                    {
-                        "id": "ad7545cc9c3c51ca"
+                        "id": "6e15934a5b1b82a2"
                     }
                 ]
             }
         ],
-        "out": [],
+        "out": [
+            {
+                "x": 540,
+                "y": 160,
+                "wires": [
+                    {
+                        "id": "b6e6e98c2dd9bb38",
+                        "port": 0
+                    }
+                ]
+            }
+        ],
         "env": [],
         "meta": {},
         "color": "#DDAA99"
@@ -35,6 +155,7 @@
         "fd_array_max": 10,
         "name": "",
         "title": "Gauge",
+        "popup_info": "",
         "value": "",
         "unit": "",
         "arc": 90,
@@ -49,7 +170,7 @@
         "needle_color": "white",
         "radius": 70,
         "stretch": "false",
-        "x": 290,
+        "x": 330,
         "y": 40,
         "wires": []
     },
@@ -66,7 +187,7 @@
         "title": "Stat",
         "unit": "",
         "value": "",
-        "color": "",
+        "color": "#2E7D32",
         "low_color": "blue",
         "high_color": "pink",
         "low_threshold": "",
@@ -76,9 +197,52 @@
         "chip": "false",
         "iso_prefix": "true",
         "zoom": 1,
-        "x": 290,
+        "x": 330,
         "y": 80,
         "wires": []
+    },
+    {
+        "id": "b6e6e98c2dd9bb38",
+        "type": "push-button",
+        "z": "96d0259206356071",
+        "fd_container": "12a3ea6ea0334c41",
+        "fd_cols": 2,
+        "fd_rows": 2,
+        "fd_array": false,
+        "fd_array_max": 10,
+        "name": "increment",
+        "title": "+1",
+        "popup_info": "",
+        "enabled": "true",
+        "color": "primary",
+        "output_value": "0",
+        "icon": "",
+        "x": 390,
+        "y": 140,
+        "wires": [
+            [
+                "6e15934a5b1b82a2"
+            ]
+        ]
+    },
+    {
+        "id": "d85818c2d17c8958",
+        "type": "function",
+        "z": "96d0259206356071",
+        "name": "function 1",
+        "func": "return { output_value: msg.payload + 1 };",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 180,
+        "wires": [
+            [
+                "b6e6e98c2dd9bb38"
+            ]
+        ]
     },
     {
         "id": "12a3ea6ea0334c41",
@@ -86,20 +250,20 @@
         "z": "96d0259206356071",
         "name": "StatGaugePanel",
         "kind": "SubflowPanel",
-        "fd_children": ",ee797777226f85f7,ad7545cc9c3c51ca",
+        "fd_children": ",b6e6e98c2dd9bb38,ee797777226f85f7,ad7545cc9c3c51ca",
         "title": "",
         "tab": "",
         "min_cols": "1",
         "max_cols": "20",
         "parent": "",
         "solid": true,
-        "cols": "2",
+        "cols": 3,
         "rows": "1"
     },
     {
         "id": "1c85227bbc14e51f",
         "type": "subflow:96d0259206356071",
-        "z": "1543d308b342690a",
+        "z": "402d4a12a2abf912",
         "name": "SF instance 1",
         "env": [
             {
@@ -124,14 +288,18 @@
             }
         ],
         "flexdash_grid": "d8b26219011823a8",
-        "x": 320,
-        "y": 180,
-        "wires": []
+        "x": 360,
+        "y": 160,
+        "wires": [
+            [
+                "476879d8c4675a86"
+            ]
+        ]
     },
     {
         "id": "81c8cf69142785ba",
         "type": "subflow:96d0259206356071",
-        "z": "1543d308b342690a",
+        "z": "402d4a12a2abf912",
         "name": "SF instance 2",
         "env": [
             {
@@ -156,14 +324,18 @@
             }
         ],
         "flexdash_grid": "d8b26219011823a8",
-        "x": 320,
-        "y": 240,
-        "wires": []
+        "x": 360,
+        "y": 220,
+        "wires": [
+            [
+                "476879d8c4675a86"
+            ]
+        ]
     },
     {
         "id": "81ba0520e6dcbebb",
         "type": "change",
-        "z": "1543d308b342690a",
+        "z": "402d4a12a2abf912",
         "name": "76",
         "rules": [
             {
@@ -179,8 +351,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 110,
-        "y": 180,
+        "x": 150,
+        "y": 160,
         "wires": [
             [
                 "1c85227bbc14e51f",
@@ -191,7 +363,7 @@
     {
         "id": "38c8f0d0cc441e4a",
         "type": "change",
-        "z": "1543d308b342690a",
+        "z": "402d4a12a2abf912",
         "name": "37",
         "rules": [
             {
@@ -207,8 +379,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 110,
-        "y": 240,
+        "x": 150,
+        "y": 220,
         "wires": [
             [
                 "81c8cf69142785ba",
@@ -219,7 +391,7 @@
     {
         "id": "61dd3827e4796af6",
         "type": "subflow:96d0259206356071",
-        "z": "1543d308b342690a",
+        "z": "402d4a12a2abf912",
         "name": "SF instance 3",
         "env": [
             {
@@ -244,14 +416,18 @@
             }
         ],
         "flexdash_grid": "81f312cf3ae5e1d3",
-        "x": 320,
-        "y": 300,
-        "wires": []
+        "x": 360,
+        "y": 280,
+        "wires": [
+            [
+                "476879d8c4675a86"
+            ]
+        ]
     },
     {
         "id": "2d8674a80fb0e380",
         "type": "change",
-        "z": "1543d308b342690a",
+        "z": "402d4a12a2abf912",
         "name": "101",
         "rules": [
             {
@@ -267,8 +443,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 110,
-        "y": 300,
+        "x": 150,
+        "y": 280,
         "wires": [
             [
                 "61dd3827e4796af6"
@@ -278,7 +454,7 @@
     {
         "id": "db8055fbcbf5a7ce",
         "type": "markdown",
-        "z": "1543d308b342690a",
+        "z": "402d4a12a2abf912",
         "fd_container": "81f312cf3ae5e1d3",
         "fd_cols": "2",
         "fd_rows": 1,
@@ -288,21 +464,22 @@
         "title": "",
         "popup_info": "",
         "text": "## This is in a second grid!",
-        "x": 310,
-        "y": 360,
+        "x": 350,
+        "y": 340,
         "wires": []
     },
     {
         "id": "602912de6de5118e",
         "type": "date-time",
-        "z": "1543d308b342690a",
-        "fd_container": "69c2e3f5798c3475",
+        "z": "402d4a12a2abf912",
+        "fd_container": "d8b26219011823a8",
         "fd_cols": "2",
         "fd_rows": 1,
         "fd_array": false,
         "fd_array_max": 10,
         "name": "",
         "title": "Flow started at",
+        "popup_info": "",
         "value": "",
         "color": "",
         "start_mode": 0,
@@ -321,14 +498,14 @@
             "weeks",
             "months"
         ],
-        "x": 300,
-        "y": 120,
+        "x": 340,
+        "y": 100,
         "wires": []
     },
     {
         "id": "428d9a1243d8730e",
         "type": "inject",
-        "z": "1543d308b342690a",
+        "z": "402d4a12a2abf912",
         "name": "",
         "props": [
             {
@@ -342,8 +519,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 130,
-        "y": 120,
+        "x": 170,
+        "y": 100,
         "wires": [
             [
                 "602912de6de5118e",
@@ -352,13 +529,205 @@
         ]
     },
     {
+        "id": "476879d8c4675a86",
+        "type": "debug",
+        "z": "402d4a12a2abf912",
+        "name": "button output",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "940c18f8f0c68f0e",
+        "type": "push-button",
+        "z": "402d4a12a2abf912",
+        "fd_container": "81f312cf3ae5e1d3",
+        "fd_cols": 1,
+        "fd_rows": 1,
+        "fd_array": false,
+        "fd_array_max": 10,
+        "name": "array-add",
+        "title": "array-add",
+        "popup_info": "",
+        "enabled": "true",
+        "color": "primary",
+        "output_value": 25,
+        "icon": "",
+        "x": 350,
+        "y": 520,
+        "wires": [
+            [
+                "b6682955e91c12b1",
+                "ea66d1c321943279",
+                "bd464307412ff50f"
+            ]
+        ]
+    },
+    {
+        "id": "588a96c52b5fb4dd",
+        "type": "inject",
+        "z": "402d4a12a2abf912",
+        "name": "",
+        "props": [
+            {
+                "p": "output_value",
+                "v": "1",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 520,
+        "wires": [
+            [
+                "940c18f8f0c68f0e"
+            ]
+        ]
+    },
+    {
+        "id": "b6682955e91c12b1",
+        "type": "function",
+        "z": "402d4a12a2abf912",
+        "name": "increment",
+        "func": "return { output_value: msg.payload+1 }\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 580,
+        "wires": [
+            [
+                "940c18f8f0c68f0e"
+            ]
+        ]
+    },
+    {
+        "id": "ea66d1c321943279",
+        "type": "subflow:37a6a41eac96c615",
+        "z": "402d4a12a2abf912",
+        "name": "",
+        "env": [
+            {
+                "name": "flexdash_grid",
+                "value": "81f312cf3ae5e1d3",
+                "type": "str"
+            }
+        ],
+        "flexdash_grid": "81f312cf3ae5e1d3",
+        "x": 600,
+        "y": 520,
+        "wires": [
+            [
+                "125221b2651b413c"
+            ]
+        ]
+    },
+    {
+        "id": "ebf1a3c728d44b4c",
+        "type": "stat",
+        "z": "402d4a12a2abf912",
+        "fd_container": "81f312cf3ae5e1d3",
+        "fd_cols": 1,
+        "fd_rows": 1,
+        "fd_array": true,
+        "fd_array_max": 10,
+        "name": "array-stat",
+        "title": "ArrayStat",
+        "popup_info": "",
+        "unit": "",
+        "value": "",
+        "color": "",
+        "low_color": "blue",
+        "high_color": "pink",
+        "low_threshold": "",
+        "high_threshold": "",
+        "low_regexp": "",
+        "high_regexp": "",
+        "chip": "false",
+        "iso_prefix": "true",
+        "zoom": 1,
+        "x": 750,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "bd464307412ff50f",
+        "type": "function",
+        "z": "402d4a12a2abf912",
+        "name": "set topic",
+        "func": "return { topic: msg.payload, value: msg.payload }",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 580,
+        "wires": [
+            [
+                "ebf1a3c728d44b4c"
+            ]
+        ]
+    },
+    {
+        "id": "125221b2651b413c",
+        "type": "debug",
+        "z": "402d4a12a2abf912",
+        "name": "array output",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 790,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "2d7d23858ab2fb3f",
+        "type": "comment",
+        "z": "402d4a12a2abf912",
+        "name": "Subflow example. Contains one subflow which has a SubflowPanel with a gauge, a stat, and a button. 3 subflow instacnes in 2 grids.",
+        "info": "",
+        "x": 540,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "27ab22d3eda45612",
+        "type": "comment",
+        "z": "402d4a12a2abf912",
+        "name": "Subflow example with array widgets, one inside the subflow and one outside. Push button widget to add topics to the array.",
+        "info": "",
+        "x": 520,
+        "y": 460,
+        "wires": []
+    },
+    {
         "id": "d8b26219011823a8",
         "type": "flexdash container",
         "name": "grid1",
         "kind": "StdGrid",
-        "fd_children": ",97e34cb72c2f36bd,55072aa954d8950a,815c9034277a4f22,1c85227bbc14e51f-12a3ea6ea0334c41",
+        "fd_children": ",602912de6de5118e,1c85227bbc14e51f,81c8cf69142785ba",
         "title": "Grid 1",
-        "tab": "fef6c0f6d48841d6",
+        "tab": "71b0ca9acbbcf623",
         "min_cols": "1",
         "max_cols": "20",
         "parent": "",
@@ -371,9 +740,9 @@
         "type": "flexdash container",
         "name": "grid2",
         "kind": "StdGrid",
-        "fd_children": ",db8055fbcbf5a7ce,61dd3827e4796af6-12a3ea6ea0334c41",
+        "fd_children": ",db8055fbcbf5a7ce,61dd3827e4796af6,940c18f8f0c68f0e,ea66d1c321943279,ebf1a3c728d44b4c",
         "title": "Grid 2",
-        "tab": "fef6c0f6d48841d6",
+        "tab": "71b0ca9acbbcf623",
         "min_cols": "1",
         "max_cols": "20",
         "parent": "",
@@ -382,18 +751,12 @@
         "rows": "1"
     },
     {
-        "id": "69c2e3f5798c3475",
-        "type": "flexdash container",
-        "name": "Demo grid",
-        "kind": "StdGrid",
-        "fd_children": ",602912de6de5118e",
-        "title": "",
-        "tab": "fef6c0f6d48841d6",
-        "min_cols": "1",
-        "max_cols": "6",
-        "parent": "",
-        "solid": false,
-        "cols": "1",
-        "rows": "1"
+        "id": "71b0ca9acbbcf623",
+        "type": "flexdash tab",
+        "name": "subflow",
+        "icon": "mdi-file-tree-outline",
+        "title": "subflow",
+        "fd_children": ",81f312cf3ae5e1d3,d8b26219011823a8",
+        "fd": "e8f5aea52ab49500"
     }
 ]
