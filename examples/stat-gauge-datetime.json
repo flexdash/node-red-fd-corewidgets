@@ -2,7 +2,7 @@
     {
         "id": "0b823de9a3746d8e",
         "type": "inject",
-        "z": "4ad395fca677e329",
+        "z": "ed64e1e7f007f71c",
         "name": "",
         "props": [
             {
@@ -16,8 +16,8 @@
         "topic": "",
         "payload": "72",
         "payloadType": "num",
-        "x": 90,
-        "y": 80,
+        "x": 150,
+        "y": 120,
         "wires": [
             [
                 "cae537b475065dc8",
@@ -28,7 +28,7 @@
     {
         "id": "07e13603525f67f5",
         "type": "change",
-        "z": "4ad395fca677e329",
+        "z": "ed64e1e7f007f71c",
         "name": "+10",
         "rules": [
             {
@@ -44,8 +44,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 130,
-        "y": 140,
+        "x": 190,
+        "y": 180,
         "wires": [
             [
                 "702ad048869ee8ff"
@@ -55,7 +55,7 @@
     {
         "id": "a9e60bb700a91522",
         "type": "inject",
-        "z": "4ad395fca677e329",
+        "z": "ed64e1e7f007f71c",
         "name": "",
         "props": [
             {
@@ -69,8 +69,8 @@
         "topic": "",
         "payload": "0.0015",
         "payloadType": "num",
-        "x": 100,
-        "y": 200,
+        "x": 160,
+        "y": 240,
         "wires": [
             [
                 "1eb4f830f88a0262",
@@ -83,7 +83,7 @@
     {
         "id": "cae537b475065dc8",
         "type": "stat",
-        "z": "4ad395fca677e329",
+        "z": "ed64e1e7f007f71c",
         "fd_container": "268989bc4b3b4aed",
         "fd_cols": 1,
         "fd_rows": 1,
@@ -103,14 +103,14 @@
         "chip": "false",
         "iso_prefix": "",
         "zoom": "",
-        "x": 310,
-        "y": 80,
+        "x": 370,
+        "y": 120,
         "wires": []
     },
     {
         "id": "702ad048869ee8ff",
         "type": "stat",
-        "z": "4ad395fca677e329",
+        "z": "ed64e1e7f007f71c",
         "fd_container": "268989bc4b3b4aed",
         "fd_cols": 1,
         "fd_rows": 1,
@@ -130,14 +130,14 @@
         "chip": "false",
         "iso_prefix": "",
         "zoom": "1.3",
-        "x": 320,
-        "y": 140,
+        "x": 380,
+        "y": 180,
         "wires": []
     },
     {
         "id": "1eb4f830f88a0262",
         "type": "stat",
-        "z": "4ad395fca677e329",
+        "z": "ed64e1e7f007f71c",
         "fd_container": "268989bc4b3b4aed",
         "fd_cols": "2",
         "fd_rows": "2",
@@ -157,14 +157,14 @@
         "chip": "false",
         "iso_prefix": "true",
         "zoom": "",
-        "x": 310,
-        "y": 200,
+        "x": 370,
+        "y": 240,
         "wires": []
     },
     {
         "id": "ae1211d812dc01ab",
         "type": "stat",
-        "z": "4ad395fca677e329",
+        "z": "ed64e1e7f007f71c",
         "fd_container": "268989bc4b3b4aed",
         "fd_cols": 1,
         "fd_rows": 1,
@@ -184,14 +184,14 @@
         "chip": "false",
         "iso_prefix": "true",
         "zoom": "1",
-        "x": 310,
-        "y": 260,
+        "x": 370,
+        "y": 300,
         "wires": []
     },
     {
         "id": "54f0fc7e08fa3686",
         "type": "stat",
-        "z": "4ad395fca677e329",
+        "z": "ed64e1e7f007f71c",
         "fd_container": "268989bc4b3b4aed",
         "fd_cols": 1,
         "fd_rows": 1,
@@ -211,14 +211,14 @@
         "chip": "false",
         "iso_prefix": "true",
         "zoom": "1.5",
-        "x": 310,
-        "y": 320,
+        "x": 370,
+        "y": 360,
         "wires": []
     },
     {
         "id": "b4f490bf7a5a7fd3",
         "type": "stat",
-        "z": "4ad395fca677e329",
+        "z": "ed64e1e7f007f71c",
         "fd_container": "268989bc4b3b4aed",
         "fd_cols": 1,
         "fd_rows": 1,
@@ -238,14 +238,14 @@
         "chip": "true",
         "iso_prefix": "false",
         "zoom": "1",
-        "x": 310,
-        "y": 380,
+        "x": 370,
+        "y": 420,
         "wires": []
     },
     {
         "id": "bd323cb4a0f47743",
         "type": "date-time",
-        "z": "4ad395fca677e329",
+        "z": "ed64e1e7f007f71c",
         "fd_container": "268989bc4b3b4aed",
         "fd_cols": "2",
         "fd_rows": 1,
@@ -255,12 +255,13 @@
         "title": "Flow started",
         "value": "",
         "color": "",
-        "low_color": "#2196F3",
-        "high_color": "#FFC107",
-        "low_threshold": "30",
-        "high_threshold": "120",
-        "chip": "false",
         "start_mode": "2",
+        "zoom": 100,
+        "low_threshold": "30",
+        "low_color": "#2196F3",
+        "high_threshold": "120",
+        "high_color": "#FFC107",
+        "chip": "false",
         "units": [
             "now",
             "sec",
@@ -270,15 +271,14 @@
             "weeks",
             "months"
         ],
-        "zoom": 100,
-        "x": 840,
-        "y": 80,
+        "x": 900,
+        "y": 120,
         "wires": []
     },
     {
         "id": "e96679e0261fe606",
         "type": "inject",
-        "z": "4ad395fca677e329",
+        "z": "ed64e1e7f007f71c",
         "name": "",
         "props": [
             {
@@ -292,8 +292,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 630,
-        "y": 80,
+        "x": 690,
+        "y": 120,
         "wires": [
             [
                 "bd323cb4a0f47743"
@@ -303,7 +303,7 @@
     {
         "id": "af172967cc3af4c7",
         "type": "date-time",
-        "z": "4ad395fca677e329",
+        "z": "ed64e1e7f007f71c",
         "fd_container": "268989bc4b3b4aed",
         "fd_cols": "2",
         "fd_rows": 1,
@@ -313,12 +313,13 @@
         "title": "Last Tick",
         "value": "",
         "color": "",
-        "low_color": "#4CAF50",
-        "high_color": "#F44336",
-        "low_threshold": "60",
-        "high_threshold": "240",
-        "chip": "false",
         "start_mode": "2",
+        "zoom": 100,
+        "low_threshold": "60",
+        "low_color": "#4CAF50",
+        "high_threshold": "240",
+        "high_color": "#F44336",
+        "chip": "false",
         "units": [
             "now",
             "sec",
@@ -328,15 +329,14 @@
             "weeks",
             "months"
         ],
-        "zoom": 100,
-        "x": 840,
-        "y": 140,
+        "x": 900,
+        "y": 180,
         "wires": []
     },
     {
         "id": "7213703455311d9f",
         "type": "inject",
-        "z": "4ad395fca677e329",
+        "z": "ed64e1e7f007f71c",
         "name": "",
         "props": [
             {
@@ -350,8 +350,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 630,
-        "y": 140,
+        "x": 690,
+        "y": 180,
         "wires": [
             [
                 "af172967cc3af4c7"
@@ -361,7 +361,7 @@
     {
         "id": "61451685fc97bdff",
         "type": "gauge",
-        "z": "4ad395fca677e329",
+        "z": "ed64e1e7f007f71c",
         "fd_container": "268989bc4b3b4aed",
         "fd_cols": "2",
         "fd_rows": 1,
@@ -383,14 +383,14 @@
         "needle_color": "white",
         "radius": "80",
         "stretch": "false",
-        "x": 830,
-        "y": 280,
+        "x": 890,
+        "y": 320,
         "wires": []
     },
     {
         "id": "6c573c959096abd0",
         "type": "inject",
-        "z": "4ad395fca677e329",
+        "z": "ed64e1e7f007f71c",
         "name": "",
         "props": [
             {
@@ -404,8 +404,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 630,
-        "y": 200,
+        "x": 690,
+        "y": 240,
         "wires": [
             [
                 "efc62871fd1101a1",
@@ -416,7 +416,7 @@
     {
         "id": "efc62871fd1101a1",
         "type": "function",
-        "z": "4ad395fca677e329",
+        "z": "ed64e1e7f007f71c",
         "name": "",
         "func": "let val = context.get(\"val\") || 0\nval += 100\nif (val > 5000) val = 100\ncontext.set('val', val)\nreturn {payload: val}",
         "outputs": 1,
@@ -424,8 +424,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 640,
-        "y": 280,
+        "x": 700,
+        "y": 320,
         "wires": [
             [
                 "61451685fc97bdff",
@@ -437,7 +437,7 @@
     {
         "id": "4ac723ed86afdd1b",
         "type": "delay",
-        "z": "4ad395fca677e329",
+        "z": "ed64e1e7f007f71c",
         "name": "",
         "pauseType": "delay",
         "timeout": "500",
@@ -451,8 +451,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 650,
-        "y": 240,
+        "x": 710,
+        "y": 280,
         "wires": [
             [
                 "efc62871fd1101a1"
@@ -462,7 +462,7 @@
     {
         "id": "dada68e818f362aa",
         "type": "gauge",
-        "z": "4ad395fca677e329",
+        "z": "ed64e1e7f007f71c",
         "fd_container": "268989bc4b3b4aed",
         "fd_cols": 1,
         "fd_rows": 1,
@@ -484,14 +484,14 @@
         "needle_color": "white",
         "radius": 70,
         "stretch": "false",
-        "x": 830,
-        "y": 320,
+        "x": 890,
+        "y": 360,
         "wires": []
     },
     {
         "id": "5083f5fbc7a054cb",
         "type": "gauge",
-        "z": "4ad395fca677e329",
+        "z": "ed64e1e7f007f71c",
         "fd_container": "268989bc4b3b4aed",
         "fd_cols": 1,
         "fd_rows": 1,
@@ -513,19 +513,19 @@
         "needle_color": "white",
         "radius": 70,
         "stretch": "false",
-        "x": 830,
-        "y": 360,
+        "x": 890,
+        "y": 400,
         "wires": []
     },
     {
         "id": "ff9e7e6607610280",
         "type": "change",
-        "z": "4ad395fca677e329",
+        "z": "ed64e1e7f007f71c",
         "name": "",
         "rules": [
             {
                 "t": "set",
-                "p": "props.max",
+                "p": "max",
                 "pt": "msg",
                 "to": "payload",
                 "tot": "msg"
@@ -541,8 +541,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 660,
-        "y": 360,
+        "x": 720,
+        "y": 400,
         "wires": [
             [
                 "5083f5fbc7a054cb",
@@ -553,7 +553,7 @@
     {
         "id": "d2d6032f0a866ebe",
         "type": "debug",
-        "z": "4ad395fca677e329",
+        "z": "ed64e1e7f007f71c",
         "name": "",
         "active": true,
         "tosidebar": true,
@@ -563,22 +563,32 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 830,
-        "y": 440,
+        "x": 890,
+        "y": 480,
         "wires": []
     },
     {
         "id": "268989bc4b3b4aed",
         "type": "flexdash container",
-        "name": "",
+        "name": "Stat-Gauge Demo",
         "kind": "StdGrid",
         "fd_children": ",cae537b475065dc8,702ad048869ee8ff,1eb4f830f88a0262,ae1211d812dc01ab,54f0fc7e08fa3686,b4f490bf7a5a7fd3,bd323cb4a0f47743,af172967cc3af4c7,61451685fc97bdff,dada68e818f362aa,5083f5fbc7a054cb,96021b179f0d40b9,de1d3aac89add6e5,f9101518ce96ccc9,e8668ae56d27875b",
-        "tab": "8b57f064dab4039f",
+        "title": "",
+        "tab": "ace5f0e8a8666233",
         "min_cols": "1",
         "max_cols": "20",
         "parent": "",
         "solid": false,
         "cols": "1",
         "rows": "1"
+    },
+    {
+        "id": "ace5f0e8a8666233",
+        "type": "flexdash tab",
+        "name": "stat-gauge demo",
+        "icon": "mdi-gauge",
+        "title": "",
+        "fd_children": ",268989bc4b3b4aed",
+        "fd": "e8f5aea52ab49500"
     }
 ]
