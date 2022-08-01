@@ -665,7 +665,7 @@
         "repeat": "",
         "crontab": "",
         "once": true,
-        "onceDelay": 0.1,
+        "onceDelay": 1.0,
         "topic": "",
         "x": 530,
         "y": 480,
