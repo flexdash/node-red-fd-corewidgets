@@ -136,8 +136,8 @@
         "color": "primary",
         "text": "POP!",
         "icon": "party-popper",
-        "x": 340,
-        "y": 280,
+        "x": 580,
+        "y": 220,
         "wires": []
     },
     {
@@ -215,14 +215,14 @@
         "name": "",
         "title": "Spark Line",
         "popup_info": "",
-        "value": 0,
+        "value": "[1,2,3,4,3,4,2,5,8,3,4,6,1,5]",
         "color": "blue",
         "fill_color": "",
         "text_color": "",
-        "show_value": "false",
+        "show_value": "true",
         "unit": "",
-        "x": 570,
-        "y": 220,
+        "x": 710,
+        "y": 480,
         "wires": []
     },
     {
@@ -266,7 +266,9 @@
         "x": 310,
         "y": 220,
         "wires": [
-            []
+            [
+                "99f15a7f02dade6e"
+            ]
         ]
     },
     {
@@ -624,6 +626,52 @@
         "wires": [
             [
                 "cf38127b0f1242b4"
+            ]
+        ]
+    },
+    {
+        "id": "99f15a7f02dade6e",
+        "type": "function",
+        "z": "06cd0b06058d537f",
+        "name": "nop",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 305,
+        "y": 280,
+        "wires": [
+            [
+                "b9a21c19a0c7c362"
+            ]
+        ],
+        "icon": "node-red/arrow-in.svg",
+        "l": false
+    },
+    {
+        "id": "7d71ef01e0c54861",
+        "type": "inject",
+        "z": "06cd0b06058d537f",
+        "name": "",
+        "props": [
+            {
+                "p": "value",
+                "v": "[1,2,4,3,7,4,8,5,6,2,9]",
+                "vt": "json"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 530,
+        "y": 480,
+        "wires": [
+            [
+                "0da53c03d6fb7619"
             ]
         ]
     },
