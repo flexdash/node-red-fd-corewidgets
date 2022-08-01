@@ -119,11 +119,11 @@
         "category": "",
         "in": [
             {
-                "x": 160,
+                "x": 80,
                 "y": 80,
                 "wires": [
                     {
-                        "id": "6e15934a5b1b82a2"
+                        "id": "b63b13c53c4a5dd2"
                     }
                 ]
             }
@@ -221,7 +221,7 @@
         "y": 140,
         "wires": [
             [
-                "6e15934a5b1b82a2"
+                "b63b13c53c4a5dd2"
             ]
         ]
     },
@@ -243,6 +243,29 @@
                 "b6e6e98c2dd9bb38"
             ]
         ]
+    },
+    {
+        "id": "b63b13c53c4a5dd2",
+        "type": "function",
+        "z": "96d0259206356071",
+        "name": "function 2",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 185,
+        "y": 80,
+        "wires": [
+            [
+                "ee797777226f85f7",
+                "d85818c2d17c8958",
+                "ad7545cc9c3c51ca"
+            ]
+        ],
+        "icon": "node-red/arrow-in.svg",
+        "l": false
     },
     {
         "id": "12a3ea6ea0334c41",
