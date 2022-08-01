@@ -8,7 +8,7 @@
         "env": []
     },
     {
-        "id": "c26e5c6bd39a1c54",
+        "id": "e8f5aea52ab49500",
         "type": "flexdash dashboard",
         "port": "80",
         "ioOpts": "{}",
@@ -26,7 +26,7 @@
         "type": "flexdash tab",
         "name": "Demo",
         "icon": "mdi-view-dashboard",
-        "fd": "c26e5c6bd39a1c54",
+        "fd": "e8f5aea52ab49500",
         "fd_children": ",69c2e3f5798c3475"
     },
     {
@@ -46,7 +46,7 @@
     },
     {
         "id": "97e34cb72c2f36bd",
-        "type": "date-time",
+        "type": "fd-date-time",
         "z": "1543d308b342690a",
         "fd_container": "69c2e3f5798c3475",
         "fd_cols": "2",

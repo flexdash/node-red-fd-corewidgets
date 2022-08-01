@@ -75,7 +75,7 @@
     },
     {
         "id": "dab802305f5f4f70",
-        "type": "push-button",
+        "type": "fd-push-button",
         "z": "37a6a41eac96c615",
         "fd_container": "b5d2aed76e91f340",
         "fd_cols": "1",
@@ -146,7 +146,7 @@
     },
     {
         "id": "ee797777226f85f7",
-        "type": "gauge",
+        "type": "fd-gauge",
         "z": "96d0259206356071",
         "fd_container": "12a3ea6ea0334c41",
         "fd_cols": "2",
@@ -176,7 +176,7 @@
     },
     {
         "id": "ad7545cc9c3c51ca",
-        "type": "stat",
+        "type": "fd-stat",
         "z": "96d0259206356071",
         "fd_container": "12a3ea6ea0334c41",
         "fd_cols": "2",
@@ -203,7 +203,7 @@
     },
     {
         "id": "b6e6e98c2dd9bb38",
-        "type": "push-button",
+        "type": "fd-push-button",
         "z": "96d0259206356071",
         "fd_container": "12a3ea6ea0334c41",
         "fd_cols": 2,
@@ -476,7 +476,7 @@
     },
     {
         "id": "db8055fbcbf5a7ce",
-        "type": "markdown",
+        "type": "fd-markdown",
         "z": "402d4a12a2abf912",
         "fd_container": "81f312cf3ae5e1d3",
         "fd_cols": "2",
@@ -493,7 +493,7 @@
     },
     {
         "id": "602912de6de5118e",
-        "type": "date-time",
+        "type": "fd-date-time",
         "z": "402d4a12a2abf912",
         "fd_container": "d8b26219011823a8",
         "fd_cols": "2",
@@ -570,7 +570,7 @@
     },
     {
         "id": "940c18f8f0c68f0e",
-        "type": "push-button",
+        "type": "fd-push-button",
         "z": "402d4a12a2abf912",
         "fd_container": "81f312cf3ae5e1d3",
         "fd_cols": 1,
@@ -661,7 +661,7 @@
     },
     {
         "id": "ebf1a3c728d44b4c",
-        "type": "stat",
+        "type": "fd-stat",
         "z": "402d4a12a2abf912",
         "fd_container": "81f312cf3ae5e1d3",
         "fd_cols": 1,

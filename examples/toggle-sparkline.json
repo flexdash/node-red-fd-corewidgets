@@ -1,7 +1,7 @@
 [
     {
         "id": "903334f637326ef0",
-        "type": "toggle",
+        "type": "fd-toggle",
         "z": "f186e5599d5c3362",
         "fd_container": "ef842956920fe694",
         "fd_cols": 1,
@@ -28,7 +28,7 @@
     },
     {
         "id": "36a95def59e7267b",
-        "type": "spark-line",
+        "type": "fd-spark-line",
         "z": "f186e5599d5c3362",
         "fd_container": "ef842956920fe694",
         "fd_cols": 1,
@@ -190,6 +190,6 @@
         "icon": "mdi-toggle-switch",
         "title": "",
         "fd_children": ",ef842956920fe694",
-        "fd": "83b54c3f9ee9394a"
+        "fd": "e8f5aea52ab49500"
     }
 ]

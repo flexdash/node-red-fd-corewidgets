@@ -1,7 +1,7 @@
 [
     {
         "id": "681967b1dcbdc45d",
-        "type": "date-time",
+        "type": "fd-date-time",
         "z": "06cd0b06058d537f",
         "fd_container": "5706d648a3e5e7bf",
         "fd_cols": "2",
@@ -35,7 +35,7 @@
     },
     {
         "id": "d0ab9d5688fbd947",
-        "type": "gauge",
+        "type": "fd-gauge",
         "z": "06cd0b06058d537f",
         "fd_container": "5706d648a3e5e7bf",
         "fd_cols": 1,
@@ -65,7 +65,7 @@
     },
     {
         "id": "d2c133da1a043679",
-        "type": "label",
+        "type": "fd-label",
         "z": "06cd0b06058d537f",
         "fd_container": "5706d648a3e5e7bf",
         "fd_cols": 1,
@@ -88,7 +88,7 @@
     },
     {
         "id": "a54978c502390e97",
-        "type": "iframe",
+        "type": "fd-iframe",
         "z": "06cd0b06058d537f",
         "fd_container": "5706d648a3e5e7bf",
         "fd_cols": 2,
@@ -105,7 +105,7 @@
     },
     {
         "id": "be8061669555edeb",
-        "type": "markdown",
+        "type": "fd-markdown",
         "z": "06cd0b06058d537f",
         "fd_container": "5706d648a3e5e7bf",
         "fd_cols": "2",
@@ -122,7 +122,7 @@
     },
     {
         "id": "be4d9c105d072dd7",
-        "type": "popup-button",
+        "type": "fd-popup-button",
         "z": "06cd0b06058d537f",
         "fd_container": "5706d648a3e5e7bf",
         "fd_cols": 2,
@@ -142,7 +142,7 @@
     },
     {
         "id": "7dacfc1a4db7e118",
-        "type": "props-table",
+        "type": "fd-props-table",
         "z": "06cd0b06058d537f",
         "fd_container": "5706d648a3e5e7bf",
         "fd_cols": "2",
@@ -164,7 +164,7 @@
     },
     {
         "id": "f76e1b7cb09977f8",
-        "type": "push-button",
+        "type": "fd-push-button",
         "z": "06cd0b06058d537f",
         "fd_container": "5706d648a3e5e7bf",
         "fd_cols": 2,
@@ -186,7 +186,7 @@
     },
     {
         "id": "cf38127b0f1242b4",
-        "type": "simple-table",
+        "type": "fd-simple-table",
         "z": "06cd0b06058d537f",
         "fd_container": "5706d648a3e5e7bf",
         "fd_cols": "2",
@@ -205,7 +205,7 @@
     },
     {
         "id": "0da53c03d6fb7619",
-        "type": "spark-line",
+        "type": "fd-spark-line",
         "z": "06cd0b06058d537f",
         "fd_container": "5706d648a3e5e7bf",
         "fd_cols": 1,
@@ -227,7 +227,7 @@
     },
     {
         "id": "b6f62cfad74e1451",
-        "type": "text-view",
+        "type": "fd-text-view",
         "z": "06cd0b06058d537f",
         "fd_container": "5706d648a3e5e7bf",
         "fd_cols": "4",
@@ -247,7 +247,7 @@
     },
     {
         "id": "b9a21c19a0c7c362",
-        "type": "toggle",
+        "type": "fd-toggle",
         "z": "06cd0b06058d537f",
         "fd_container": "5706d648a3e5e7bf",
         "fd_cols": 1,
@@ -273,7 +273,7 @@
     },
     {
         "id": "5535e621ade0e3e0",
-        "type": "value-sequence",
+        "type": "fd-value-sequence",
         "z": "06cd0b06058d537f",
         "fd_container": "5706d648a3e5e7bf",
         "fd_cols": 1,
@@ -301,7 +301,7 @@
     },
     {
         "id": "c8d25a6f5bc9242d",
-        "type": "wind-plot",
+        "type": "fd-wind-plot",
         "z": "06cd0b06058d537f",
         "fd_container": "5706d648a3e5e7bf",
         "fd_cols": "4",
@@ -323,7 +323,7 @@
     },
     {
         "id": "1d235058a33a5e73",
-        "type": "stat",
+        "type": "fd-stat",
         "z": "06cd0b06058d537f",
         "fd_container": "5706d648a3e5e7bf",
         "fd_cols": 1,
@@ -351,7 +351,7 @@
     },
     {
         "id": "9c0c7165cb86de68",
-        "type": "time-plot",
+        "type": "fd-time-plot",
         "z": "06cd0b06058d537f",
         "fd_container": "5706d648a3e5e7bf",
         "fd_cols": "4",
@@ -504,7 +504,7 @@
     },
     {
         "id": "aadfec47806a1840",
-        "type": "label",
+        "type": "fd-label",
         "z": "06cd0b06058d537f",
         "fd_container": "f1c97ab04f25d698",
         "fd_cols": 1,
@@ -527,7 +527,7 @@
     },
     {
         "id": "877c4596d3d20239",
-        "type": "stat",
+        "type": "fd-stat",
         "z": "06cd0b06058d537f",
         "fd_container": "f1c97ab04f25d698",
         "fd_cols": 1,
@@ -555,7 +555,7 @@
     },
     {
         "id": "824d3ab624871cf2",
-        "type": "label",
+        "type": "fd-label",
         "z": "06cd0b06058d537f",
         "fd_container": "675263a8440a43c7",
         "fd_cols": 1,
@@ -578,7 +578,7 @@
     },
     {
         "id": "db9f9e18b20f8aaa",
-        "type": "stat",
+        "type": "fd-stat",
         "z": "06cd0b06058d537f",
         "fd_container": "675263a8440a43c7",
         "fd_cols": 1,

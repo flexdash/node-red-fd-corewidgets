@@ -1,7 +1,7 @@
 [
     {
         "id": "02a8193ebdb37b8f",
-        "type": "time-plot",
+        "type": "fd-time-plot",
         "z": "daf85507baa384b2",
         "fd_container": "28d1859702cdf729",
         "fd_cols": "3",
@@ -36,7 +36,7 @@
     },
     {
         "id": "d2dbe97c44f6fb5a",
-        "type": "wind-plot",
+        "type": "fd-wind-plot",
         "z": "daf85507baa384b2",
         "fd_container": "28d1859702cdf729",
         "fd_cols": "3",
@@ -146,6 +146,6 @@
         "icon": "mdi-chart-line",
         "title": "",
         "fd_children": ",28d1859702cdf729",
-        "fd": "6e90ea4ca2351464"
+        "fd": "e8f5aea52ab49500"
     }
 ]

@@ -1,7 +1,7 @@
 [
     {
         "id": "ff3b8ee5e9ce7a43",
-        "type": "gauge",
+        "type": "fd-gauge",
         "z": "bd5cd3aac8d087ce",
         "fd_container": "222e41c74ddbb9c9",
         "fd_cols": 1,
@@ -100,7 +100,7 @@
     },
     {
         "id": "880c1ba444182e0e",
-        "type": "stat",
+        "type": "fd-stat",
         "z": "bd5cd3aac8d087ce",
         "fd_container": "222e41c74ddbb9c9",
         "fd_cols": 1,
@@ -227,7 +227,7 @@
     },
     {
         "id": "e4438375f66f580d",
-        "type": "date-time",
+        "type": "fd-date-time",
         "z": "bd5cd3aac8d087ce",
         "fd_container": "222e41c74ddbb9c9",
         "fd_cols": 1,
@@ -338,7 +338,7 @@
     },
     {
         "id": "ed7477892a74767c",
-        "type": "gauge",
+        "type": "fd-gauge",
         "z": "bd5cd3aac8d087ce",
         "fd_container": "dc312cdca781d24c",
         "fd_cols": "2",
@@ -447,7 +447,7 @@
     },
     {
         "id": "189a3497beb18f80",
-        "type": "stat",
+        "type": "fd-stat",
         "z": "bd5cd3aac8d087ce",
         "fd_container": "dc312cdca781d24c",
         "fd_cols": "2",
@@ -574,7 +574,7 @@
     },
     {
         "id": "e71216b0cf062c73",
-        "type": "stat",
+        "type": "fd-stat",
         "z": "bd5cd3aac8d087ce",
         "fd_container": "ce17e7e77546bc50",
         "fd_cols": "3",
@@ -601,7 +601,7 @@
     },
     {
         "id": "4675860a810a3fe0",
-        "type": "push-button",
+        "type": "fd-push-button",
         "z": "bd5cd3aac8d087ce",
         "fd_container": "ce17e7e77546bc50",
         "fd_cols": "3",
@@ -824,6 +824,6 @@
         "icon": "mdi-hexagon-multiple",
         "title": "",
         "fd_children": ",222e41c74ddbb9c9",
-        "fd": "83b54c3f9ee9394a"
+        "fd": "e8f5aea52ab49500"
     }
 ]

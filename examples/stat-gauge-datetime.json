@@ -82,7 +82,7 @@
     },
     {
         "id": "cae537b475065dc8",
-        "type": "stat",
+        "type": "fd-stat",
         "z": "ed64e1e7f007f71c",
         "fd_container": "268989bc4b3b4aed",
         "fd_cols": 1,
@@ -109,7 +109,7 @@
     },
     {
         "id": "702ad048869ee8ff",
-        "type": "stat",
+        "type": "fd-stat",
         "z": "ed64e1e7f007f71c",
         "fd_container": "268989bc4b3b4aed",
         "fd_cols": 1,
@@ -136,7 +136,7 @@
     },
     {
         "id": "1eb4f830f88a0262",
-        "type": "stat",
+        "type": "fd-stat",
         "z": "ed64e1e7f007f71c",
         "fd_container": "268989bc4b3b4aed",
         "fd_cols": "2",
@@ -163,7 +163,7 @@
     },
     {
         "id": "ae1211d812dc01ab",
-        "type": "stat",
+        "type": "fd-stat",
         "z": "ed64e1e7f007f71c",
         "fd_container": "268989bc4b3b4aed",
         "fd_cols": 1,
@@ -190,7 +190,7 @@
     },
     {
         "id": "54f0fc7e08fa3686",
-        "type": "stat",
+        "type": "fd-stat",
         "z": "ed64e1e7f007f71c",
         "fd_container": "268989bc4b3b4aed",
         "fd_cols": 1,
@@ -217,7 +217,7 @@
     },
     {
         "id": "b4f490bf7a5a7fd3",
-        "type": "stat",
+        "type": "fd-stat",
         "z": "ed64e1e7f007f71c",
         "fd_container": "268989bc4b3b4aed",
         "fd_cols": 1,
@@ -244,7 +244,7 @@
     },
     {
         "id": "bd323cb4a0f47743",
-        "type": "date-time",
+        "type": "fd-date-time",
         "z": "ed64e1e7f007f71c",
         "fd_container": "268989bc4b3b4aed",
         "fd_cols": "2",
@@ -302,7 +302,7 @@
     },
     {
         "id": "af172967cc3af4c7",
-        "type": "date-time",
+        "type": "fd-date-time",
         "z": "ed64e1e7f007f71c",
         "fd_container": "268989bc4b3b4aed",
         "fd_cols": "2",
@@ -360,7 +360,7 @@
     },
     {
         "id": "61451685fc97bdff",
-        "type": "gauge",
+        "type": "fd-gauge",
         "z": "ed64e1e7f007f71c",
         "fd_container": "268989bc4b3b4aed",
         "fd_cols": "2",
@@ -461,7 +461,7 @@
     },
     {
         "id": "dada68e818f362aa",
-        "type": "gauge",
+        "type": "fd-gauge",
         "z": "ed64e1e7f007f71c",
         "fd_container": "268989bc4b3b4aed",
         "fd_cols": 1,
@@ -490,7 +490,7 @@
     },
     {
         "id": "5083f5fbc7a054cb",
-        "type": "gauge",
+        "type": "fd-gauge",
         "z": "ed64e1e7f007f71c",
         "fd_container": "268989bc4b3b4aed",
         "fd_cols": 1,
