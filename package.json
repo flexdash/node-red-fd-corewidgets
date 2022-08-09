@@ -38,6 +38,7 @@
       "flexdash text-view": "text-view.js",
       "flexdash time-plot-raw": "time-plot-raw.js",
       "flexdash time-plot": "time-plot.js",
+      "flexdash timeline-plot": "timeline-plot.js",
       "flexdash toggle": "toggle.js",
       "flexdash tree-view": "tree-view.js",
       "flexdash value-sequence": "value-sequence.js",
