@@ -25,7 +25,7 @@ if [[ -f ../node-red-flexdash/gen-widget-nodes.js ]]; then
     echo Using source gen-widget-nodes
     node ../node-red-flexdash/gen-widget-nodes.js
 else
-    echo Using NPM gen-widget-nodes $(egrep version ./node_modules/@flexdash/node-red-flexdash/package.json)
+    echo Using NPM gen-widget-nodes $(egrep version ./node_modules/@flexdash/node-red-flexdash/package.json | head -1)
     node ./node_modules/.bin/gen-widget-nodes
 fi
 # insert the generated nodes into package.json
