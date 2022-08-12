@@ -11,7 +11,8 @@ else
   mkdir -p flexdash-src
   echo Downloading FlexDash ${FLEXDASH_VERSION}
   curl -L https://s3.amazonaws.com/s3.voneicken.com/flexdash/flexdash-${FLEXDASH_VERSION}-src.tgz | \
-    tar -C flexdash-src -zxf - src/widgets
+    tar -C flexdash-src -zxf - VERSION src/widgets
+  echo "Got flexdash $(cat flexdash-src/VERSION)"
   cp -r flexdash-src/src/widgets widgets
 fi
 ( cd widgets; rm *-widget.vue panel.vue random-*.vue thermostat.vue upload-button.vue )
@@ -24,7 +25,7 @@ if [[ -f ../node-red-flexdash/gen-widget-nodes.js ]]; then
     echo Using source gen-widget-nodes
     node ../node-red-flexdash/gen-widget-nodes.js
 else
-    echo Using NPM gen-widget-nodes
+    echo Using NPM gen-widget-nodes $(egrep version ./node_modules/@flexdash/node-red-flexdash/package.json)
     node ./node_modules/.bin/gen-widget-nodes
 fi
 # insert the generated nodes into package.json
