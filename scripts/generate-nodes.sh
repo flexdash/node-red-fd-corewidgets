@@ -11,8 +11,8 @@ else
   mkdir -p flexdash-src
   echo Downloading FlexDash ${FLEXDASH_VERSION}
   curl -L https://s3.amazonaws.com/s3.voneicken.com/flexdash/flexdash-${FLEXDASH_VERSION}-src.tgz | \
-    tar -C flexdash-src -zxf - VERSION src/widgets
-  echo "Got flexdash $(cat flexdash-src/VERSION)"
+    tar -C flexdash-src -zxf - package.json src/widgets
+  echo "Got flexdash $(egrep version flexdash-src/package.json)"
   cp -r flexdash-src/src/widgets widgets
 fi
 ( cd widgets; rm *-widget.vue panel.vue random-*.vue thermostat.vue upload-button.vue )
