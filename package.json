@@ -25,6 +25,7 @@
     "version": ">=2.0.6",
     "nodes": {
       "flexdash datetime": "datetime.js",
+      "flexdash dropdown-select": "dropdown-select.js",
       "flexdash gauge": "gauge.js",
       "flexdash iframe": "iframe.js",
       "flexdash label": "label.js",
