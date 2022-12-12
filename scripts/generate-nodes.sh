@@ -1,6 +1,11 @@
 #! /bin/bash -e
 FLEXDASH_VERSION=0.4
 
+if ! [[ -f ./scripts/generate-nodes.sh ]]; then
+  echo "Must be run from the node-red-fd-corewidgets dir itself"
+  exit 1
+fi
+
 npm install --no-progress --no-audit --no-fund
 # get flexdash source since the widget sources are there
 rm -rf flexdash-src widgets
