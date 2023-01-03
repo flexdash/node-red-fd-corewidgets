@@ -13,13 +13,50 @@ onNodeRedCustom = (props, options) => {
     if ('payload' in props) {
         const pl = props.payload
         delete props.payload
-        if (pl !== null && !Array.isArray(pl)) return
+        if (pl !== null && !Array.isArray(pl)) {
+            this.warn("Invalid payload, must be array or null")
+            return
+        }
 
         // full array update
         if (pl === null || pl.length == 0 || Array.isArray(pl[0])) {
             // array of arrays: the whole data set is being replaced, we can pass this through as-is
+            // perform validation to save users from endless troubleshooting
+            if (pl !== null && pl.length > 0) {
+                const n0 = pl[0].length
+                if (n0 < 1) {
+                    this.warn(`msg.payload[0] has ${n0} values, expected at least 1 (time)`)
+                    return
+                } else if (n0 > 100) {
+                    this.warn(`msg.payload[0] has ${n0} values, expected at most 100`)
+                    return
+                }
+                for (let i=1; i<pl.length; i++) {
+                    if (!Array.isArray(pl[i])) {
+                        this.warn(`msg.payload[${i}] is not an array, got ${pl[i]}`)
+                        return
+                    }
+                    if (pl[i].length != n0) {
+                        this.warn(`msg.payload[${i}] has ${pl[i].length} values, expected ${n0}`)
+                        return
+                    }
+                    for (let j=0; j<n0; j++) {
+                        if (typeof pl[i][j] != 'number' && pl[i][j] != null) {
+                            this.warn(`msg.payload[${i}][${j}] is not a number or null, got ${pl[i][j]}`)
+                            return
+                        }
+                    }
+                }
+            }
             props.data = pl
             return
+        }
+
+        for (let i=0; i<pl.length; i++) {
+            if (typeof pl[i] != 'number' && typeof pl[i] != null) {
+                this.warn(`msg.payload[${i}] is not a number or null, got ${pl[i][j]}`)
+                return
+            }
         }
 
         // single data point append
